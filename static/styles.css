@@ -16,12 +16,11 @@ body {
     margin-bottom: 20px;
 }
 
-
 .container {
     text-align: center;
     padding: 20px;
     border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: white;
     max-width: 500px; /* Pour que le conteneur n'occupe pas toute la largeur de la page */
 }
@@ -32,6 +31,7 @@ body {
     border-radius: 10px;
     padding: 15px;
     margin: 10px 0;
+    overflow: auto; /* Ajout de la barre de défilement en cas de dépassement du contenu */
 }
 
 .data-card h3 {

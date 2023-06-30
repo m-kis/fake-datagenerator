@@ -18,25 +18,31 @@
             {% for identity in fakeData %}
                 <div class="data-card">
                     <h3>Nom</h3>
-                    <p>{{ identity.name }}</p>
+                    <p>{{ identity['name'] }}</p>
 
                     <h3>Email</h3>
-                    <p>{{ identity.email }}</p>
+                    <p>{{ identity['email'] }}</p>
+                    <p>Le mail générer n'est pas réel pour un vrai mail <a href="{{ temp_email_url }}">Cliquez ici</a>.</p>
+                    <h3>Numéro de téléphone fixe</h3>
+                    <p>{{ identity['phone_number'] }}</p>
 
-                    <h3>Numéro de téléphone</h3>
-                    <p>{{ identity.phone_number }}</p>
+                    <h3>Numéro de téléphone portable</h3>
+                    <p>Pour un portable jetable <a href="https://online-sms.org/fr/Free-FR-Phone-Number"> Cliquez ici</a></p>
+
+                    <h3>Numéro de sécurité sociale</h3>
+                    <p>0{{ identity['insee_number'] }}</p>
 
                     <h3>Adresse</h3>
-                    <p>{{ identity.address }}</p>
+                    <p>{{ identity['address'] }}</p>
 
                     <h3>Date de naissance</h3>
-                    <p>{{ identity.date_of_birth }}</p>
+                    <p>{{ identity['date_of_birth'] }}</p>
 
                     <h3>Carte de crédit</h3>
-                    <p>Numéro : {{ identity.credit_card.number }}</p>
-                    <p>Date d'expiration : {{ identity.credit_card.expiry_date }}</p>
-                    <p>CVV : {{ identity.credit_card.cvv }}</p>
-                    <p>Fournisseur : {{ identity.credit_card.provider }}</p>
+                    <p>Numéro : {{ identity['credit_card']['number'] }}</p>
+                    <p>Date d'expiration : {{ identity['credit_card']['expiry_date'] }}</p>
+                    <p>CVV : {{ identity['credit_card']['cvv'] }}</p>
+                    <p>Fournisseur : {{ identity['credit_card']['provider'] }}</p>
                 </div>
             {% endfor %}
         {% endif %}
