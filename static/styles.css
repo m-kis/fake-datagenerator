@@ -23,7 +23,9 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: white;
     max-width: 500px; /* Pour que le conteneur n'occupe pas toute la largeur de la page */
+    align-items: flex-start; /* Nouvelle ligne ajoutée */
 }
+
 
 .data-card {
     background-color: #F5F5F5;
