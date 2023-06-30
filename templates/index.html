@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Générateur d'identités fictives</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <img class="logo" src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+        <h1>Générateur d'identités fictives M-KIS</h1>
+        <form method="POST">
+            <label for="num_identities">Nombre d'identités à générer :</label>
+            <input type="number" id="num_identities" name="num_identities" min="1" max="10" value="1">
+            <input type="submit" value="Générer !">
+        </form>
+        {% if fakeData %}
+            {% for identity in fakeData %}
+                <div class="data-card">
+                    <h3>Nom</h3>
+                    <p>{{ identity.name }}</p>
+
+                    <h3>Email</h3>
+                    <p>{{ identity.email }}</p>
+
+                    <h3>Numéro de téléphone</h3>
+                    <p>{{ identity.phone_number }}</p>
+
+                    <h3>Adresse</h3>
+                    <p>{{ identity.address }}</p>
+
+                    <h3>Date de naissance</h3>
+                    <p>{{ identity.date_of_birth }}</p>
+
+                    <h3>Carte de crédit</h3>
+                    <p>Numéro : {{ identity.credit_card.number }}</p>
+                    <p>Date d'expiration : {{ identity.credit_card.expiry_date }}</p>
+                    <p>CVV : {{ identity.credit_card.cvv }}</p>
+                    <p>Fournisseur : {{ identity.credit_card.provider }}</p>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+</body>
+</html>
