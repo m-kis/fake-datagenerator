@@ -2,7 +2,7 @@
  Ce projet est un générateur d'identités fictives française basé sur Flask et Python.
 # Générateur d'Identités Fictives M-KIS
 
-Ce projet est un générateur d'identités fictives basé sur Flask et Python. Il utilise des packages tels que Faker, TempMail et CreditCard pour créer des informations d'identité fictives telles que le nom, l'adresse, l'email, le numéro de téléphone, la date de naissance et les détails de la carte de crédit.
+Ce projet est un générateur d'identités fictives basé sur Flask et Python. Il utilise des packages tels que Faker et CreditCard pour créer des informations d'identité fictives telles que le nom, l'adresse, l'email, le numéro de téléphone, la date de naissance et les détails de la carte de crédit.
 
 # Installation
 Pour installer ce projet sur votre machine locale, suivez les étapes suivantes :
